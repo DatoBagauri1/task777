@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Hobbies{% endblock %}
+
+{% block content %}
+<h3>ჩემი ჰობები:</h3>
+<ul>
+    {% for hobby in hobbies %}
+        <li>{{ hobby }}</li>
+    {% endfor %}
+</ul>
+
+{% if grade == 12 %}
+    <p>შენ ხარ აბიტურიენტი</p>
+{% else %}
+    <p>მომავალი აბიტურიენტი</p>
+{% endif %}
+{% endblock %}

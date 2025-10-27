@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'temp_app/style.css' %}">
+</head>
+<body>
+    <header>
+        <h2>ჩემი Django Project</h2>
+    </header>
+    <nav>
+    <img src="https://th.bing.com/th/id/OIP.4Zlz9EJCToZclQveC43GaAHaEK?w=288&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Image">
+    <a href="/greet/">Hello</a>
+    <a href="/info/">Info</a>
+    <a href="/h/">Hobbies</a><br>
+    </nav>
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
